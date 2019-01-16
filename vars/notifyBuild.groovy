@@ -1,5 +1,5 @@
 
-def notifyBuild(String extraMsg='') {
+def call(String extraMsg='') {
 
   echo "Notify by global function"
 
