@@ -27,9 +27,3 @@ def call(String extraMsg='') {
   // Send notifications
   slackSend (color: colorCode, message: msg)
 }
-
-def isNotifySuccessBranch(String branch){
-    
-    def allowedBranches = env.NOTIFY_SUCCESS_BRANCHES.split(';')
-    return allowedBranches.contains(env.BRANCH_NAME)
-}
