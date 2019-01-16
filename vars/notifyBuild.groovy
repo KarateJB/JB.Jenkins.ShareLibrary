@@ -1,5 +1,7 @@
 
-def notifyBuild_rm(String extraMsg='') {
+def notifyBuild(String extraMsg='') {
+
+  echo "Notify by global function"
 
   def commitId = sh(returnStdout: true, script: 'git rev-parse --short HEAD') //Get short commit hash
   def buildStatus = currentBuild.currentResult //Get current build status
